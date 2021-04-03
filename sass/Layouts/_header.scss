@@ -1,0 +1,50 @@
+header {
+    position: absolute;
+    top: 20px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index:2;
+    p {
+        font-size: $fs-0;
+        font-weight: $fw-bold;
+        color: $color-white-0;
+        a {
+            color: $color-white-0;
+            transition: all .5s;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        i{
+            cursor: pointer;
+            transition: all .5s;
+            &:hover {
+                color: #fbbd61;
+            }
+        }
+    }
+
+    #movieNavBar {
+        .navbar-nav {
+            border-bottom: 1px solid $color-gray-1;
+            .nav-item {
+                .nav-link {
+                    color: $color-white-0;
+                    letter-spacing: $ls-1;
+                    line-height: $lh-1;
+                    padding: $pd-1 $pd-1 + 4;
+                }
+            }
+        }
+    }
+}
+
+#headerFixed {
+    background-color: $color-black-1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transform: translate(-50%, -100%);
+    transition: transform 0.5s;
+    z-index: 16;
+}

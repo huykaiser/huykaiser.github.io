@@ -1,0 +1,59 @@
+// GLOBAL
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: $color-gray-0;
+}
+
+::selection{
+    background-color: $color-orange-0;
+    color: $color-white-0;
+}
+
+// line style for list navbar
+.line{
+    &::after{
+        content: '';
+        width: 0;
+        height: 3px;
+        background: linear-gradient(to right, $color-orange-1,$color-orange-0);
+        display: block;
+        // box-shadow: 0 0 20px 0 $color-orange-1;
+        transition: .5s;
+    }
+    &:hover::after{
+        width: 100%;
+    }
+}
+
+.section{
+    padding:$pd-3 $pd-0;
+}
+
+.title{
+    color:$color-orange-0;
+    font-size: $fs-2;
+    border-bottom: 1px solid #d8d8d8;
+    text-transform: uppercase;
+    letter-spacing: $ls-2;
+    margin-bottom:$mg-3;
+    &::after{
+        content: '';
+        width: $bs-3;
+        display: block;
+        background: linear-gradient(to right, #fbbd61, #ec7532);
+        height:4px;
+        margin-top:$mg-1;
+    }
+}
+
+.title--white{
+    color: $color-white-0;
+    border-bottom: 1px solid #333;
+}

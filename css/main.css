@@ -1,0 +1,532 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #717171;
+}
+
+::selection {
+  background-color: #ec7532;
+  color: white;
+}
+
+.line::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+  display: block;
+  transition: .5s;
+}
+
+.line:hover::after {
+  width: 100%;
+}
+
+.section {
+  padding: 75px 0px;
+}
+
+.title {
+  color: #ec7532;
+  font-size: 1.125rem;
+  border-bottom: 1px solid #d8d8d8;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+  margin-bottom: 40px;
+}
+
+.title::after {
+  content: '';
+  width: 125px;
+  display: block;
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+  height: 4px;
+  margin-top: 20px;
+}
+
+.title--white {
+  color: white;
+  border-bottom: 1px solid #333;
+}
+
+header {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+header p {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+header p a {
+  color: white;
+  transition: all .5s;
+}
+
+header p a:hover {
+  text-decoration: none;
+}
+
+header p i {
+  cursor: pointer;
+  transition: all .5s;
+}
+
+header p i:hover {
+  color: #fbbd61;
+}
+
+header #movieNavBar .navbar-nav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header #movieNavBar .navbar-nav .nav-item .nav-link {
+  color: white;
+  letter-spacing: 3px;
+  line-height: 0.8em;
+  padding: 20px 24px;
+}
+
+#headerFixed {
+  background-color: #101010;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transform: translate(-50%, -100%);
+  transition: transform 0.5s;
+  z-index: 16;
+}
+
+.movieCarousel #carouselMovie {
+  height: 650px;
+}
+
+.movieCarousel #carouselMovie .carousel-inner {
+  height: 100%;
+}
+
+.movieCarousel #carouselMovie .carousel-inner .carousel-item {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.movieCarousel #carouselMovie .carousel-inner .carousel-item:first-child {
+  background-image: url(../img/hero-1.jpg);
+}
+
+.movieCarousel #carouselMovie .carousel-inner .carousel-item:nth-child(2) {
+  background-image: url(../img/hero-2.jpg);
+}
+
+.movieCarousel #carouselMovie .carousel-inner .carousel-item:nth-child(3) {
+  background-image: url(../img/hero-3.jpg);
+}
+
+.movieCarousel #carouselMovie .carousel-inner .carousel-item .carousel-caption {
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+.movieCarousel #carouselMovie .carousel-inner .carousel-item .carousel-caption p:first-of-type {
+  color: #fbbd61;
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 2px;
+  animation-delay: 0.5s;
+}
+
+.movieCarousel #carouselMovie .carousel-inner .carousel-item .carousel-caption p:last-of-type {
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+}
+
+.movieCarousel #carouselMovie .carousel-inner .carousel-item .carousel-caption h2 {
+  font-size: 3.25rem;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.movieCarousel #carouselMovie .carousel-inner .carousel-item .carousel-caption .movieCarousel__trailer {
+  animation-delay: 0.5s;
+}
+
+.movieCarousel #carouselMovie .carousel-inner .carousel-item .carousel-caption .movieCarousel__trailer > span {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid white;
+  font-size: 0.8rem;
+  display: inline-block;
+  text-align: center;
+  line-height: 48px;
+  margin-right: 8px;
+}
+
+.movieCarousel #carouselMovie .carousel-inner .carousel-item .carousel-caption .movieCarousel__trailer button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  color: white;
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+  position: relative;
+  outline: none;
+  overflow: hidden;
+}
+
+.movieCarousel #carouselMovie .carousel-inner .carousel-item .carousel-caption .movieCarousel__trailer button:hover {
+  color: white;
+}
+
+.movieCarousel #carouselMovie .carousel-inner .carousel-item .carousel-caption .movieCarousel__trailer button::before {
+  content: "";
+  width: 110%;
+  height: 100%;
+  background-color: #ec7532;
+  position: absolute;
+  top: 0;
+  left: 30;
+  display: block;
+  z-index: 1;
+  transform: skewX(30deg) translateX(-120%);
+  transition: 0.5s;
+}
+
+.movieCarousel #carouselMovie .carousel-inner .carousel-item .carousel-caption .movieCarousel__trailer button:hover::before {
+  transform: skewX(30deg) translateX(-20%);
+}
+
+.movieCarousel #carouselMovie .carousel-inner .carousel-item .carousel-caption .movieCarousel__trailer button span {
+  position: relative;
+  z-index: 2;
+}
+
+.movieCarousel #carouselMovie .carousel-inner .carousel-item .movieCarousel__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, black, transparent);
+}
+
+.newIn .newIn__content .newIn__img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.newIn .newIn__content .newIn__img .newIn__overlay {
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #fbbd61, #ec7532);
+  transform: skewX(30deg) translateX(-150%);
+  transition: 0.5s;
+  opacity: 0.9;
+}
+
+.newIn .newIn__content .newIn__img:hover .newIn__overlay {
+  transform: skewX(30deg) translateX(-30%);
+}
+
+.newIn .newIn__content .newIn__img .newIn__play {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.newIn .newIn__content .newIn__img .newIn__play i {
+  width: 80px;
+  height: 80px;
+  border: 2px solid white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 80px;
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.newIn .newIn__content .newIn__img .newIn__play i:hover {
+  transform: scale(0.9);
+}
+
+.newIn .newIn__content .newIn__img .newIn__play a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  display: block;
+  letter-spacing: 4px;
+  margin: 1rem 0px;
+}
+
+.newIn .newIn__content .newIn__img .newIn__play p {
+  color: white;
+}
+
+.newIn .newIn__content .newIn__img:hover .newIn__play {
+  opacity: 1;
+}
+
+.newIn .newIn__content .newIn__title {
+  text-align: center;
+}
+
+.newIn .newIn__content .newIn__title h3 {
+  font-size: 18px;
+  color: #4a4a4a;
+  margin: 1rem 0px;
+}
+
+.newIn .newIn__content .newIn__title i {
+  color: #fbbd61;
+}
+
+.showTimes .nav-tabs .nav-item {
+  margin-bottom: 0px;
+}
+
+.showTimes .nav-tabs .nav-item .nav-link.active {
+  color: #ec7532;
+}
+
+.showTimes .nav-tabs .nav-item .nav-link {
+  border: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #4a4a4a;
+  padding: 15px 30px;
+  display: block;
+}
+
+.showTimes #myTabContent .tab-pane .showTimes__row {
+  border: 1px solid #d8d8d8;
+}
+
+.showTimes #myTabContent .tab-pane .showTimes__row:last-child {
+  border-bottom: none;
+}
+
+.showTimes #myTabContent .tab-pane .showTimes__row img {
+  border-radius: 10px;
+}
+
+.showTimes #myTabContent .tab-pane .showTimes__row div p:first-of-type {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #ec7532;
+  margin-bottom: 0px;
+}
+
+.showTimes #myTabContent .tab-pane .showTimes__row div p a {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #ec7532;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.showTimes #myTabContent .tab-pane .showTimes__row div p a:hover {
+  color: #101010;
+}
+
+.showTimes #myTabContent .tab-pane .showTimes__row div h3 {
+  font-size: 24px;
+  font-weight: 300;
+  color: #101010;
+  letter-spacing: 1px;
+}
+
+.showTimes #myTabContent .tab-pane .showTimes__row div .showTimes__runingTimes {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #4a4a4a;
+}
+
+.showTimes #myTabContent .tab-pane .showTimes__row div .showTimes__runingTimes button {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #717171;
+  background-color: #d8d8d8;
+}
+
+.showTimes #myTabContent .tab-pane .showTimes__row div .showTimes__mins span:last-child {
+  width: 33px;
+  height: 33px;
+  display: inline-block;
+  color: white;
+  background-color: #4a4a4a;
+  text-align: center;
+  line-height: 33px;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.comingSoon {
+  background: #101010 url("../img/slide-3.png");
+  background-size: cover;
+  color: white;
+}
+
+.comingSoon .comingSoon__type {
+  font-size: 14px;
+  color: #ec7532;
+  letter-spacing: 2px;
+}
+
+.comingSoon h3 {
+  font-size: 34px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.comingSoon .comingSoon__rating > i {
+  color: #fbbd61;
+}
+
+.comingSoon p {
+  margin: 1rem 0px;
+}
+
+.comingSoon a {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #ec7532;
+  text-decoration: none;
+  transition: .5s;
+}
+
+.comingSoon a:hover {
+  color: white;
+}
+
+.comingSoon .comingSoon__video {
+  position: relative;
+}
+
+.comingSoon .comingSoon__video i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  border: 1px solid #ec7532;
+  border-radius: 50%;
+  font-size: 25px;
+  transition: .5s;
+  color: white;
+}
+
+.comingSoon .comingSoon__video:hover i {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.movieList {
+  background-color: #101010;
+}
+
+.movieList .movieList__item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.movieList .movieList__item .movieList__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #101010;
+  opacity: 0.4;
+  transition: .5s;
+}
+
+.movieList .movieList__item:hover .movieList__overlay {
+  opacity: 0;
+}
+
+.contact__content {
+  text-align: center;
+}
+
+.contact__content p:first-child {
+  font-size: 23px;
+  color: #4a4a4a;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.contact__content p a {
+  font-size: 46px;
+  color: #fbbd61;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #101010;
+}
+
+footer h3 {
+  font-size: 16px;
+  color: #ec7532;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+footer li {
+  list-style: none;
+}
+
+footer li a {
+  font-size: 13px;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  padding: 3px 0px;
+  transition: 0.5s;
+}
+
+footer li a:hover {
+  color: #fbbd61;
+  text-decoration: none;
+}
+
+footer .footer__copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 15px 0px;
+}
+
+footer .footer__copyright p {
+  margin-bottom: 0px;
+}
+/*# sourceMappingURL=main.css.map */

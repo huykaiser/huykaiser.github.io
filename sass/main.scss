@@ -1,0 +1,16 @@
+// Helpers
+@import './Helpers/_variables.scss';
+@import './Helpers/_mixin.scss';
+
+//Base
+@import './Base/reset';
+
+//Layouts
+@import './Layouts/header';
+@import './Layouts/carousel';
+@import './Layouts/newIn';
+@import './Layouts/showtimes';
+@import './Layouts/comingSoon';
+@import './Layouts/movieList';
+@import './Layouts/contact';
+@import './Layouts/footer';

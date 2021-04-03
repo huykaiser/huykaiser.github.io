@@ -1,0 +1,32 @@
+footer {
+    background-color: $color-black-1;
+    h3 {
+        font-size: $fs-0 + 2;
+        color: $color-orange-0;
+        letter-spacing: $ls-1 - 1;
+        margin-bottom: $mg-1 - 5;
+    }
+    li {
+        list-style: none;
+        a {
+            font-size: $fs-0 - 1;
+            color: $color-white-0;
+            text-decoration: none;
+            letter-spacing:$ls-2 - 0.2;
+            padding: $pd-0 + 3 $pd-0;
+            transition: 0.5s;
+            &:hover {
+                color: $color-orange-1;
+                text-decoration: none;
+            }
+        }
+    }
+    .footer__copyright{
+        border-top: 1px solid $color-gray-1;
+        color:$color-white-0;
+        padding:$pd-2 + 3 $pd-0;
+        p{
+            margin-bottom: $mg-0;
+        }
+    }
+}
