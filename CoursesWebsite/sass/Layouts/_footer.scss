@@ -1,0 +1,20 @@
+footer {
+    @include styleText($color-gray-0, $fs-1, $fw-0);
+    .footer__bottom {
+        width: 90%;
+        margin: $mg-3 - 2 auto;
+        img {
+            width: 110px;
+            margin-right: $mg-0 + 5;
+        }
+        .logo-black {
+            display: inline-block;
+        }
+        .logo-white {
+            display: none;
+        }
+        .nav-link {
+            @include styleText($color-blue-0, $fs-1, $fw-0);
+        }
+    }
+}
