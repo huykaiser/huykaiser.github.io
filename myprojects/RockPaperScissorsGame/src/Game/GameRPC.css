@@ -1,0 +1,52 @@
+.gameRPS{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    background-size: 100%;
+    font-family: fontGame;
+}
+
+@font-face {
+    font-family: 'fontGame';
+    src: url('../font/Pony.ttf');
+}
+
+.theThink{
+    border: 5px solid #45D994;
+    width: 250px;
+    height: 150px;
+    background:white;
+    border-radius: 10px;
+}
+
+.btnItem{
+    width: 75px;
+    height:75px;
+}
+
+.playerGame{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.speech-bubble{
+    position: relative;
+    background-color: #45D994;
+    border-radius: .4em;
+}
+
+.speech-bubble:after{
+    content: '';
+    position: absolute;
+    bottom:0;   
+    width: 0;
+    height:0;
+    border: 35px solid transparent;
+    border-top-color: #45D994;
+    border-bottom:0;
+    border-left:0;
+    margin-bottom: -35px;
+}
